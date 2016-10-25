@@ -10,8 +10,8 @@ $(document).ready(function() {
   $("button#palindrome").click(function() {
     inputString = $("#inputString").val();
     console.log(inputString);
-    outputSting = stringToArray(inputString);
-    $("#outputString").text(outputSting);
+    outputString = stringToArray(inputString);
+    $("#outputString").text(outputString);
   });
 
   $("#refresh").click(function(){
@@ -37,6 +37,7 @@ $(document).ready(function() {
 var outputString = "";
 var inputArray = [];
 var inputString = "";
+var newArray = [];
 
 var stringToArray = function(inputString) {
   for (i = 0; i<inputString.length; i++) {
@@ -45,16 +46,16 @@ var stringToArray = function(inputString) {
   console.log(inputArray);
 };
 
-var inputArray = ["a", "b", "c", "d"];
+// var inputArray = ["a", "b", "c", "d"];
 var temp = "";
 var palindromeTest = function(inputArray) {
-  for (i = 0; i < inputArray.length; i++) {
-    inputArray.push(inputArray[i]);
+  for (i = inputArray.length - 1; i > 0; i--) {
+    newArray.push(inputArray[i]);
     // temp = inputArray[i];
     // inputArray[i] = inputArray[inputArray.length-(1+i)];
     // inputArray[inputArray.length-(1+i)] = inputArray[i];
 
-    alert(inputArray);
+    // alert(inputArray);
 
   };
   // return inputArray;

@@ -9,9 +9,10 @@ $(document).ready(function() {
 
   $("button#palindrome").click(function() {
     inputString = $("#inputString").val();
-    console.log(inputString);
+    // console.log(inputString);
     outputString = stringToArray(inputString);
     $("#outputString").text(outputString);
+    palindromeTest(inputArray);
   });
 
   $("#refresh").click(function(){
@@ -47,9 +48,9 @@ var stringToArray = function(inputString) {
 };
 
 // var inputArray = ["a", "b", "c", "d"];
-var temp = "";
+// var temp = "";
 var palindromeTest = function(inputArray) {
-  for (i = inputArray.length - 1; i > 0; i--) {
+  for (i = inputArray.length - 1; i >= 0; i--) {
     newArray.push(inputArray[i]);
     // temp = inputArray[i];
     // inputArray[i] = inputArray[inputArray.length-(1+i)];
@@ -58,7 +59,6 @@ var palindromeTest = function(inputArray) {
     // alert(inputArray);
 
   };
-  // return inputArray;
+  console.log(newArray);
 };
 // alert(inputArray);
-palindromeTest(inputArray);
